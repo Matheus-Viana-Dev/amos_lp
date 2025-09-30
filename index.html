@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Amós Troncos e Balanças — Orçamento via WhatsApp</title>
+    <meta name="description" content="Solicite seu orçamento de Troncos, Balanças e Currais pelo WhatsApp. Durabilidade, tecnologia e segurança no manejo para sua pecuária.">
+
+    <!-- SEO basics -->
+    <link rel="canonical" href="/">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.2/css/all.min.css" crossorigin="anonymous">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="./styles.css">
+
+    <!-- Favicon (optional) -->
+    <link rel="icon" href="assets/favicon.png">
+</head>
+<body>
+    <!-- Header / Hero -->
+    <header class="hero">
+        <div class="hero__overlay"></div>
+        <div class="container hero__content">
+            <div class="hero__grid">
+                <div class="hero__text">
+                    <div class="hero__badge"><i class="fa-brands fa-whatsapp"></i> Orçamento rápido pelo WhatsApp</div>
+                    <h1 class="hero__title">Modernize sua fazenda: orçamento de equipamentos pecuários via WhatsApp</h1>
+                    <p class="hero__subtitle">Receba as melhores soluções em <strong>Troncos</strong>, <strong>Balanças</strong> e <strong>Currais</strong> diretamente no seu celular.</p>
+
+                </div>
+                <form id="form" class="lead-form" novalidate>
+                    <div class="form__row">
+                        <label for="name">Nome</label>
+                        <input type="text" id="name" name="name" placeholder="Seu nome completo" autocomplete="name" required>
+                    </div>
+                    <div class="form__row">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" autocomplete="email" required>
+                    </div>
+                    <div class="form__row form__row--phone">
+                        <label for="phone">Celular</label>
+                        <div class="phone__group">
+                            <span class="phone__flag" aria-hidden="true">🇧🇷</span>
+                            <input type="tel" id="phone" name="phone" inputmode="numeric" placeholder="(11) 91234-5678" autocomplete="tel" required>
+                        </div>
+                    </div>
+                    <div class="form__row">
+                        <label for="product">Produto</label>
+                        <div class="select">
+                            <select id="product" name="product" required>
+                                <option value="" disabled selected>Selecione um equipamento</option>
+                                <option>Tronco de Contenção</option>
+                                <option>Balança Eletrônica</option>
+                                <option>Curral Móvel</option>
+                                <option>Apartador</option>
+                                <option>Pescoceira</option>
+                                <option>Embarcador Móvel</option>
+                                <option>Gaiola de Pesagem</option>
+                            </select>
+                            <i class="fa-solid fa-chevron-down select__chev" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <div class="form__row form__row--captcha">
+                        <label for="captcha">Para confirmar: <span id="captchaQuestion"></span></label>
+                        <div style="display:flex; gap:8px; align-items:center;">
+                            <input type="text" id="captcha" name="captcha" placeholder="Resultado" inputmode="numeric" required>
+                            <button type="button" id="captchaRefresh" class="btn btn--light" aria-label="Atualizar captcha"><i class="fa-solid fa-rotate-right"></i></button>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn--primary btn--full">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        Solicitar Orçamento via WhatsApp
+                    </button>
+                    <p class="form__note">Ao enviar, seus dados serão encaminhados e você será direcionado ao WhatsApp.</p>
+                </form>
+            </div>
+        </div>
+        <picture class="hero__bg">
+            <img src="assets/imagem_hero.png" alt="Equipamentos pecuários no campo" loading="eager">
+        </picture>
+    </header>
+
+    <!-- Benefits -->
+    <section class="section section--benefits">
+        <div class="container">
+            <h2 class="section__title"><i class=""></i> Por que escolher a <span>Amós Troncos e Balanças</span>?</h2>
+            <p class="section__lead">Soluções que transformam sua pecuária com foco em produtividade e segurança.</p>
+            <div class="grid grid--benefits">
+                <div class="card benefit">
+                    <div class="benefit__icon"><i class="fa-solid fa-gears"></i></div>
+                    <h3>Durabilidade e Tecnologia</h3>
+                    <p>Estruturas reforçadas e componentes de alta performance para aguentar o ritmo do campo.</p>
+                </div>
+                <div class="card benefit">
+                    <div class="benefit__icon"><i class="fa-solid fa-arrow-trend-up"></i></div>
+                    <h3>Produtividade</h3>
+                    <p>Fluxo de manejo otimizado que reduz tempo e esforço da equipe, aumentando a eficiência.</p>
+                </div>
+                <div class="card benefit">
+                    <div class="benefit__icon"><i class="fa-solid fa-helmet-safety"></i></div>
+                    <h3>Segurança no Manejo</h3>
+                    <p>Projetos pensados para o bem-estar animal e proteção da equipe.</p>
+                </div>
+                <div class="card benefit">
+                    <div class="benefit__icon"><i class="fa-solid fa-headset"></i></div>
+                    <h3>Atendimento Consultivo</h3>
+                    <p>Suporte especializado para indicar o equipamento ideal para sua operação.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <!-- Testimonials -->
+    <section class="section section--testimonials">
+        <div class="container">
+            <h2 class="section__title"><i class=""></i> O que nossos clientes dizem</h2>
+            <div class="grid grid--testimonials">
+                <figure class="card testimonial">
+                    <div class="testimonial__quote">
+                        <i class="fa-solid fa-quote-left"></i>
+                        <blockquote>"O tronco reduziu o tempo de manejo e aumentou a segurança da equipe."</blockquote>
+                    </div>
+                    <figcaption>
+                        <div class="testimonial__author">
+                            <strong>João Pereira</strong>
+                            <span>Fazenda Boa Vista, MT</span>
+                        </div>
+                    </figcaption>
+                </figure>
+                <figure class="card testimonial">
+                    <div class="testimonial__quote">
+                        <i class="fa-solid fa-quote-left"></i>
+                        <blockquote>"A balança é precisa e resistente. Suporte atencioso do começo ao fim."</blockquote>
+                    </div>
+                    <figcaption>
+                        <div class="testimonial__author">
+                            <strong>Ana Souza</strong>
+                            <span>Agro Santa Ana, GO</span>
+                        </div>
+                    </figcaption>
+                </figure>
+                <figure class="card testimonial">
+                    <div class="testimonial__quote">
+                        <i class="fa-solid fa-quote-left"></i>
+                        <blockquote>"Equipamentos robustos que realmente suportam a rotina do campo."</blockquote>
+                    </div>
+                    <figcaption>
+                        <div class="testimonial__author">
+                            <strong>Carlos Lima</strong>
+                            <span>Estância Três Rios, MS</span>
+                        </div>
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+    </section>
+
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer__grid">
+            <div class="footer__brand">
+                <span class="logo-badge">
+                    <img src="assets/amos_logo.png" alt="Amós - Troncos e Balanças" class="footer__logo" loading="lazy">
+                </span>
+                <p class="footer__tagline">Bruto, rústico e confiável, é Amós! Cuidando do seu rebanho.</p>
+            </div>
+            <div class="footer__contact">
+                <h4>Contato</h4>
+                <ul class="footer__contact-list">
+                    <li><i class="fa-solid fa-envelope"></i> <a href="mailto:contato@amostroncosebalancas.com.br" class="footer__link-white">contato@amostroncosebalancas.com.br</a></li>
+                    <li><i class="fa-solid fa-location-dot"></i> Av. Franscisco Kitano, 555 - Parque Industrial Zona Norte · Apucarana/PR · CEP 86806-420</li>
+                    <li><i class="fa-solid fa-id-card"></i> CNPJ: 38.312.494/0001-12</li>
+                </ul>
+                <div class="footer__actions">
+                    
+                </div>
+            </div>
+            <div class="footer__links">
+                <h4>Links</h4>
+                <ul>
+                    <li><a href="#" rel="nofollow">Política de Privacidade</a></li>
+                    <li><a href="#" rel="nofollow">Termos de Uso</a></li>
+                </ul>
+                <div class="footer__separator"></div>
+                <ul class="footer__social">
+                    <li><a aria-label="Instagram" href="https://www.instagram.com/amostroncos/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a aria-label="Facebook" href="https://www.facebook.com/checkpoint/1501092823525282/?next=https%3A%2F%2Fwww.facebook.com%2Famostroncosebalancas%2F#" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook-f"></i></a></li>
+                    <li><a aria-label="WhatsApp" href="#form"><i class="fa-brands fa-whatsapp"></i></a></li>
+                    <li><a aria-label="Email" href="mailto:contato@amostroncosebalancas.com.br"><i class="fa-solid fa-envelope"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer__copy">© <span id="year"></span> Amós - Troncos e Balanças. Todos os direitos reservados. CNPJ 38.312.494/0001-12.</div>
+    </footer>
+
+    <!-- Scripts -->
+    <script defer src="./script.js"></script>
+</body>
+</html>
+
+
