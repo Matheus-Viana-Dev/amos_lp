@@ -3,7 +3,7 @@
   const phoneInput = document.getElementById('phone');
   const form = document.getElementById('form');
 
-  const WHATSAPP_NUMBER_E164 = '5567000000000';
+  const WHATSAPP_NUMBER_E164 = '5543996289935';
 
   function maskBrPhone(value) {
     const digits = value.replace(/\D/g, '').slice(0, 11);
@@ -39,18 +39,6 @@
     return encodeURIComponent(lines.join('\n'));
   }
 
-  // Captcha (local)
-  const captchaQuestion = document.getElementById('captchaQuestion');
-  const captchaInput = document.getElementById('captcha');
-  const captchaRefresh = document.getElementById('captchaRefresh');
-  function generateCaptcha() {
-    if (!captchaQuestion || !captchaInput) return;
-    const a = Math.floor(Math.random() * 8) + 2;
-    const b = Math.floor(Math.random() * 8) + 2;
-    captchaQuestion.textContent = `${a} + ${b} = ?`;
-    captchaInput.dataset.answer = String(a + b);
-    captchaInput.value = '';
-  }
 
   async function sendFormToApi(formData) {
     try {
@@ -74,20 +62,11 @@
       return;
     }
 
-    if (captchaInput) {
-      const captchaVal = (captchaInput.value || '').trim();
-      const captchaAns = captchaInput.dataset.answer;
-      if (captchaVal !== captchaAns) {
-        alert('Captcha incorreto. Tente novamente.');
-        generateCaptcha();
-        return;
-      }
-    }
 
     const phoneE164 = sanitizePhoneToE164(phoneMasked);
     if (!phoneE164) { alert('Número de celular inválido.'); return; }
 
-    // Do not include captcha fields in payload
+    // Prepare payload for API
     const payload = { name, email, phone: phoneMasked, product };
     await sendFormToApi(payload);
 
@@ -101,7 +80,6 @@
 
   document.addEventListener('DOMContentLoaded', function() {
     if (phoneInput) phoneInput.addEventListener('input', onPhoneInput);
-    if (captchaRefresh) captchaRefresh.addEventListener('click', generateCaptcha);
     if (form) form.addEventListener('submit', onSubmit);
     const heroCta = document.getElementById('heroCta');
     if (heroCta) {
@@ -112,7 +90,6 @@
     }
     const yearEl = document.getElementById('year');
     if (yearEl) yearEl.textContent = String(new Date().getFullYear());
-    generateCaptcha();
   });
 })();
 
