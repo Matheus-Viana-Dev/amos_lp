@@ -80,7 +80,7 @@
             </div>
         </div>
         <picture class="hero__bg">
-            <img src="assets/imagem_hero.png" alt="Equipamentos pecuários no campo" loading="eager">
+            <img src="assets/imagem_hero.png" alt="Equipamentos pecuários no campo" loading="eager" decoding="async">
         </picture>
     </header>
 
@@ -89,7 +89,9 @@
         <div class="container">
             <h2 class="section__title"><i class=""></i> Por que escolher a <span>Amós Troncos e Balanças</span>?</h2>
             <p class="section__lead">Soluções que transformam sua pecuária com foco em produtividade e segurança.</p>
-            <div class="grid grid--benefits">
+            
+            <!-- Desktop Grid -->
+            <div class="grid grid--benefits benefits-desktop">
                 <div class="card benefit">
                     <div class="benefit__icon"><i class="fa-solid fa-gears"></i></div>
                     <h3>Durabilidade e Tecnologia</h3>
@@ -109,6 +111,44 @@
                     <div class="benefit__icon"><i class="fa-solid fa-headset"></i></div>
                     <h3>Atendimento Consultivo</h3>
                     <p>Suporte especializado para indicar o equipamento ideal para sua operação.</p>
+                </div>
+            </div>
+            
+            <!-- Mobile Swiper -->
+            <div class="benefits-mobile">
+                <div class="swiper benefits-swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="card benefit">
+                                <div class="benefit__icon"><i class="fa-solid fa-gears"></i></div>
+                                <h3>Durabilidade e Tecnologia</h3>
+                                <p>Estruturas reforçadas e componentes de alta performance para aguentar o ritmo do campo.</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="card benefit">
+                                <div class="benefit__icon"><i class="fa-solid fa-arrow-trend-up"></i></div>
+                                <h3>Produtividade</h3>
+                                <p>Fluxo de manejo otimizado que reduz tempo e esforço da equipe, aumentando a eficiência.</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="card benefit">
+                                <div class="benefit__icon"><i class="fa-solid fa-helmet-safety"></i></div>
+                                <h3>Segurança no Manejo</h3>
+                                <p>Projetos pensados para o bem-estar animal e proteção da equipe.</p>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="card benefit">
+                                <div class="benefit__icon"><i class="fa-solid fa-headset"></i></div>
+                                <h3>Atendimento Consultivo</h3>
+                                <p>Suporte especializado para indicar o equipamento ideal para sua operação.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Pagination dots -->
+                    <div class="swiper-pagination"></div>
                 </div>
             </div>
         </div>
@@ -207,6 +247,34 @@
                                 </figcaption>
                             </figure>
                         </div>
+                        <div class="swiper-slide">
+                            <figure class="card testimonial">
+                                <div class="testimonial__quote">
+                                    <i class="fa-solid fa-quote-left"></i>
+                                    <blockquote>"Atendimento excepcional e produtos de qualidade superior. Recomendo!"</blockquote>
+                                </div>
+                                <figcaption>
+                                    <div class="testimonial__author">
+                                        <strong>Maria Santos</strong>
+                                        <span>Fazenda São José, SP</span>
+                                    </div>
+                                </figcaption>
+                            </figure>
+                        </div>
+                        <div class="swiper-slide">
+                            <figure class="card testimonial">
+                                <div class="testimonial__quote">
+                                    <i class="fa-solid fa-quote-left"></i>
+                                    <blockquote>"Investimento que valeu cada centavo. Produtividade aumentou 40%."</blockquote>
+                                </div>
+                                <figcaption>
+                                    <div class="testimonial__author">
+                                        <strong>Roberto Silva</strong>
+                                        <span>Agropecuária Central, MG</span>
+                                    </div>
+                                </figcaption>
+                            </figure>
+                        </div>
                     </div>
                     <!-- Pagination dots -->
                     <div class="swiper-pagination"></div>
@@ -221,7 +289,7 @@
         <div class="container footer__grid">
             <div class="footer__brand">
                 <span class="logo-badge">
-                    <img src="assets/amos_logo.png" alt="Amós - Troncos e Balanças" class="footer__logo" loading="lazy">
+                    <img src="assets/amos_logo.png" alt="Amós - Troncos e Balanças" class="footer__logo" loading="lazy" decoding="async">
                 </span>
                 <p class="footer__tagline">Bruto, rústico e confiável, é Amós! Cuidando do seu rebanho.</p>
             </div>
@@ -243,12 +311,12 @@
                     <li><a href="#" rel="nofollow">Termos de Uso</a></li>
                 </ul>
                 <div class="footer__separator"></div>
-                <ul class="footer__social">
-                    <li><a aria-label="Instagram" href="https://www.instagram.com/amostroncos/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a></li>
-                    <li><a aria-label="Facebook" href="https://www.facebook.com/checkpoint/1501092823525282/?next=https%3A%2F%2Fwww.facebook.com%2Famostroncosebalancas%2F#" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook-f"></i></a></li>
-                    <li><a aria-label="WhatsApp" href="#form"><i class="fa-brands fa-whatsapp"></i></a></li>
-                    <li><a aria-label="Email" href="mailto:contato@amostroncosebalancas.com.br"><i class="fa-solid fa-envelope"></i></a></li>
-                </ul>
+                <div class="footer__social">
+                    <a aria-label="Instagram" href="https://www.instagram.com/amostroncos/" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-instagram"></i></a>
+                    <a aria-label="Facebook" href="https://www.facebook.com/checkpoint/1501092823525282/?next=https%3A%2F%2Fwww.facebook.com%2Famostroncosebalancas%2F#" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a aria-label="WhatsApp" href="#form"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a aria-label="Email" href="mailto:contato@amostroncosebalancas.com.br"><i class="fa-solid fa-envelope"></i></a>
+                </div>
             </div>
         </div>
         <div class="footer__copy">© <span id="year"></span> Amós - Troncos e Balanças. Todos os direitos reservados. CNPJ 38.312.494/0001-12.</div>
@@ -256,7 +324,7 @@
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script defer src="./script.js"></script>
+    <script src="./script.js"></script>
 </body>
 </html>
 
