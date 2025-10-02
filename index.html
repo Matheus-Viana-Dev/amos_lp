@@ -17,6 +17,9 @@
     <!-- Icons -->
     <link rel="preconnect" href="https://cdn.jsdelivr.net">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.2/css/all.min.css" crossorigin="anonymous">
+    
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
 
     <!-- Styles -->
     <link rel="stylesheet" href="./styles.css">
@@ -117,7 +120,9 @@
     <section class="section section--testimonials">
         <div class="container">
             <h2 class="section__title"><i class=""></i> O que nossos clientes dizem</h2>
-            <div class="grid grid--testimonials">
+            
+            <!-- Desktop Grid -->
+            <div class="grid grid--testimonials testimonials-desktop">
                 <figure class="card testimonial">
                     <div class="testimonial__quote">
                         <i class="fa-solid fa-quote-left"></i>
@@ -154,6 +159,58 @@
                         </div>
                     </figcaption>
                 </figure>
+            </div>
+            
+            <!-- Mobile Swiper -->
+            <div class="testimonials-mobile">
+                <div class="swiper testimonials-swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <figure class="card testimonial">
+                                <div class="testimonial__quote">
+                                    <i class="fa-solid fa-quote-left"></i>
+                                    <blockquote>"O tronco reduziu o tempo de manejo e aumentou a segurança da equipe."</blockquote>
+                                </div>
+                                <figcaption>
+                                    <div class="testimonial__author">
+                                        <strong>João Pereira</strong>
+                                        <span>Fazenda Boa Vista, MT</span>
+                                    </div>
+                                </figcaption>
+                            </figure>
+                        </div>
+                        <div class="swiper-slide">
+                            <figure class="card testimonial">
+                                <div class="testimonial__quote">
+                                    <i class="fa-solid fa-quote-left"></i>
+                                    <blockquote>"A balança é precisa e resistente. Suporte atencioso do começo ao fim."</blockquote>
+                                </div>
+                                <figcaption>
+                                    <div class="testimonial__author">
+                                        <strong>Ana Souza</strong>
+                                        <span>Agro Santa Ana, GO</span>
+                                    </div>
+                                </figcaption>
+                            </figure>
+                        </div>
+                        <div class="swiper-slide">
+                            <figure class="card testimonial">
+                                <div class="testimonial__quote">
+                                    <i class="fa-solid fa-quote-left"></i>
+                                    <blockquote>"Equipamentos robustos que realmente suportam a rotina do campo."</blockquote>
+                                </div>
+                                <figcaption>
+                                    <div class="testimonial__author">
+                                        <strong>Carlos Lima</strong>
+                                        <span>Estância Três Rios, MS</span>
+                                    </div>
+                                </figcaption>
+                            </figure>
+                        </div>
+                    </div>
+                    <!-- Pagination dots -->
+                    <div class="swiper-pagination"></div>
+                </div>
             </div>
         </div>
     </section>
@@ -198,6 +255,7 @@
     </footer>
 
     <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script defer src="./script.js"></script>
 </body>
 </html>

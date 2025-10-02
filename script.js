@@ -90,6 +90,28 @@
     }
     const yearEl = document.getElementById('year');
     if (yearEl) yearEl.textContent = String(new Date().getFullYear());
+    
+    // Initialize Swiper for testimonials on mobile
+    if (window.Swiper) {
+      const testimonialsSwiper = new Swiper('.testimonials-swiper', {
+        slidesPerView: 1,
+        spaceBetween: 20,
+        loop: true,
+        autoplay: {
+          delay: 5000,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        breakpoints: {
+          768: {
+            enabled: false, // Disable swiper on desktop
+          }
+        }
+      });
+    }
   });
 })();
 
